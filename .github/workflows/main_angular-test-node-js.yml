@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: '${{ github.workspace }}/dist/test-project'
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,4 +52,4 @@ jobs:
           app-name: 'Angular-test-node-js'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_15B5992B1832474C8895E8D581330BC9 }}
-          package: .
+          package: '${{ github.workspace }}/dist/test-project'
