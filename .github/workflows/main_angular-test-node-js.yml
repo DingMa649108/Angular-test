@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: '${{ github.workspace }}/dist/test-project'
+          path: '${{ github.workspace }}/dist/test-project/node-app'
 
   deploy:
     runs-on: ubuntu-latest
